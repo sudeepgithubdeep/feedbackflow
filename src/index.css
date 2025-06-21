@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Modern Feedback App Theme
+   * Professional and warm color palette suitable for workplace feedback
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 20% 15%;
+
+    /* Professional blue-purple primary */
+    --primary: 244 75% 57%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Warm secondary */
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 215 20% 15%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 217 91% 96%;
+    --accent-foreground: 244 75% 57%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 214 31% 91%;
+    --input: 214 31% 91%;
+    --ring: 244 75% 57%;
+
+    --radius: 0.75rem;
+
+    /* Success color for positive feedback */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning color for neutral feedback */
+    --warning: 45 93% 47%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Feedback sentiment colors */
+    --positive: 142 71% 45%;
+    --neutral: 45 93% 47%;
+    --negative: 0 84% 60%;
+
+    --sidebar-background: 244 30% 97%;
+    --sidebar-foreground: 215 20% 25%;
+    --sidebar-primary: 244 75% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 244 20% 92%;
+    --sidebar-accent-foreground: 215 20% 25%;
+    --sidebar-border: 214 31% 88%;
+    --sidebar-ring: 244 75% 57%;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 210 40% 95%;
+
+    --card: 215 25% 10%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 215 25% 10%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 244 75% 65%;
+    --primary-foreground: 215 25% 8%;
+
+    --secondary: 215 20% 15%;
+    --secondary-foreground: 210 40% 95%;
+
+    --muted: 215 20% 15%;
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 215 20% 15%;
+    --accent-foreground: 244 75% 65%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 210 40% 95%;
+
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 244 75% 65%;
+
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 45 93% 55%;
+    --warning-foreground: 0 0% 100%;
+
+    --positive: 142 71% 50%;
+    --neutral: 45 93% 55%;
+    --negative: 0 75% 55%;
+
+    --sidebar-background: 215 25% 6%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 244 75% 65%;
+    --sidebar-primary-foreground: 215 25% 8%;
+    --sidebar-accent: 215 20% 12%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 215 20% 15%;
+    --sidebar-ring: 244 75% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "rlig" 1,
+      "calt" 1;
+  }
+}
+
+@layer utilities {
+  .feedback-positive {
+    @apply bg-green-50 border-green-200 text-green-900 dark:bg-green-950 dark:border-green-800 dark:text-green-100;
+  }
+
+  .feedback-neutral {
+    @apply bg-yellow-50 border-yellow-200 text-yellow-900 dark:bg-yellow-950 dark:border-yellow-800 dark:text-yellow-100;
+  }
+
+  .feedback-negative {
+    @apply bg-red-50 border-red-200 text-red-900 dark:bg-red-950 dark:border-red-800 dark:text-red-100;
+  }
+}

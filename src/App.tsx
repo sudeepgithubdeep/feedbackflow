@@ -4,8 +4,8 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { getCurrentUser } from "@/lib/auth";
-import { User } from "@/types";
+import { getCurrentUser } from "./lib/auth.ts";
+import type { User } from "./types/index.ts";
 
 // Pages
 import Login from "./pages/Login";
